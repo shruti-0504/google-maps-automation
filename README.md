@@ -1,57 +1,51 @@
-📍 Google Maps Directions Automation
-This Node.js script automates the process of retrieving driving directions from your home to 91 Springboard, Vikhroli using Google Maps, and saves them in an Excel sheet.
+# 📍 Google Maps Directions Automation
 
-🧰 Tech Stack
-Node.js
+This Node.js script automates the process of retrieving driving directions from **your residential location** to **91 Springboard, Vikhroli** using Google Maps, and saves them in an Excel sheet.
 
-Selenium WebDriver (Chrome)
+---
 
-xlsx (Excel file generation)
+## 🧰 Tech Stack
 
-🚀 How It Works
-Launches Google Maps in Chrome browser.
+- **Node.js**
+- **Selenium WebDriver (Chrome)**
+- **xlsx (for Excel generation)**
 
-Clicks the Directions button.
+---
 
-Enters your source and destination.
+## 🚀 Features
 
-Selects the first route and collects step-by-step directions.
+- Opens Google Maps in Chrome
+- Clicks on the “Directions” button
+- Enters starting and destination addresses
+- Selects the first route
+- Extracts step-by-step driving instructions
+- Saves the instructions to `DrivingInstructions.xlsx`
+- Takes a screenshot of the result
 
-Saves the directions in DrivingInstructions.xlsx.
+---
 
-Takes a screenshot for visual confirmation.
+## 📦 Setup Instructions
 
-📦 Setup Instructions
-1. Clone or Download
-bash
-Copy
-Edit
+### 1. Clone or Download the Repository
+
+```bash
 git clone <your-repo-url>
 cd assignment
-2. Install Required Packages
-bash
-Copy
-Edit
-npm init -y
+```
+2. Install Dependencies
+```bash
+npm install
 npm install selenium-webdriver xlsx
-3. Run the Script
-bash
-Copy
-Edit
+```
+4. Run the Script
+```bash
 node googleMapsAutomation.js
-📝 Make sure Chrome is installed and your internet connection is working.
+```
+✅ Ensure Chrome is installed and connected to the internet.
 
-📂 Output
-DrivingInstructions.xlsx: Step-by-step driving directions.
+📂 Output Files
+DrivingInstructions.xlsx: Contains all step-by-step driving instructions
 
-screenshot.png: Screenshot after success.
+screenshot.png: Screenshot of the directions page
 
-error_screenshot.png: Screenshot if something goes wrong.
-
-✍️ Customize
-To change the source address, edit this line in googleMapsAutomation.js:
-
-js
-Copy
-Edit
-await startBox.sendKeys('Your Home Address Here\n');
+error_screenshot.png: If an error occurs during automation
